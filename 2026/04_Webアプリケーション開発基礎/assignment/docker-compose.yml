@@ -21,6 +21,8 @@ services:
     working_dir: /app
     volumes:
       - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
     environment:
       - NEXT_PUBLIC_API_ORIGIN=http://backend:8080
     command: ["npm", "run", "dev"]
